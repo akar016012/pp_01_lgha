@@ -1,7 +1,5 @@
 name: Issue event test
-on:
-  issue_comment:
-    types: [created]
+on: issues
 jobs:
   output-info:
     runs-on: ubuntu-latest
