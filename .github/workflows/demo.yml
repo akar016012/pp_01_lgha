@@ -9,10 +9,6 @@ jobs:
     steps:
       - name: checkout node
         uses: actions/checkout@v3
-      - name: Set up PowerShell Core
-        uses: actions/setup-pwsh@v1  # This action sets up PowerShell Core
-        with:
-          pwsh-version: '7.x'  # You can specify the version you want to use
   pull_project:
     needs: deploy
     runs-on: self-hosted
