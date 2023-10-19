@@ -17,3 +17,4 @@ jobs:
         run: |
           cd "C:\Users\Adi Kar\Desktop\learn_github_actions\pp_01_lgha"
           git pull origin main
+          #test
