@@ -19,5 +19,5 @@ jobs:
       - name: Pull project
         shell: cmd
         run: |
-          icacls "C:\Users\Adi Kar\Desktop\learn_github_actions\pp_01_lgha" /grant:r "%USERNAME%:(OI)(CI)F"
+          icacls "C:\Users\Adi Kar\Desktop\learn_github_actions\pp_01_lgha" /grant:r "NT AUTHORITY\SYSTEM:(OI)(CI)F"
           git pull origin main
