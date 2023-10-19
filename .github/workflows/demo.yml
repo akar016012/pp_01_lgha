@@ -20,4 +20,5 @@ jobs:
         shell: cmd
         run: |
           cd /d "C:\pp_01_lgha"
+          git config --global --add safe.directory C:/pp_01_lgha
           git pull origin main
