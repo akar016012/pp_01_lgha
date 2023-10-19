@@ -12,8 +12,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-  pull_project:
+  install_powershell_core:
     needs: deploy
+    runs-on: self-hosted
+    steps:
+      - name: Install PowerShell Core
+        run: |
+          # Install PowerShell Core
+          choco install powershell-core -y
+          # Verify the installation
+          pwsh -v
+
+  pull_project:
+    needs: install_powershell_core  # Make sure it depends on the install step
     runs-on: self-hosted
     steps:
       - name: Pull project
