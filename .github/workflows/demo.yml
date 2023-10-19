@@ -9,15 +9,11 @@ jobs:
     steps:
       - name: checkout node
         uses: actions/checkout@v3
-      - name: Deploy to Windows
+  pull_project:
+    needs: deploy
+    runs-on: self-hosted
+    steps:
+      - name: pull project
         run: |
-          $server = "Akar2-PyDev01"
-          $username = "adikar"
-          $password = "Somu1022"
-          $localPath = "./path/files"
-          $remotePath = "c:\path"
-          $securePassword = ConvertTo-SecureString -String $password -AsPlainText -Force
-          $credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $username, $securePassword
-          Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope "adikar"
-          Copy-Item -Path $localPath -Destination "\\$server\$remotePath" -Recurse -Credential $credential
-        shell: powershell
+          cd C:\Users\Adi Kar\Desktop\learn_github_actions\pp_01_lgha;; git pull origin main
+      
