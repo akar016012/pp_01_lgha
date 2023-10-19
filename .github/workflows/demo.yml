@@ -19,6 +19,6 @@ jobs:
       - name: Pull project
         shell: cmd
         run: |
-          cd /d "C:\pp_01_lgha"
+          cd /d "C:\inetpub\wwwroot\iheart\pp_01_lgha"
           git config --global --add safe.directory C:\inetpub\wwwroot\iheart\pp_01_lgha
           git pull origin main
