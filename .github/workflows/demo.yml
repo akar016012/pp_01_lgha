@@ -1,21 +1,24 @@
 name: Deploy to Windows Server
+
 on:
   push:
     branches:
       - main
+
 jobs:
   deploy:
     runs-on: self-hosted
     steps:
-      - name: checkout node
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
+
   pull_project:
     needs: deploy
     runs-on: self-hosted
     steps:
-      - name: pull project
+      - name: Pull project
         shell: pwsh
         run: |
           cd "C:\Users\Adi Kar\Desktop\learn_github_actions\pp_01_lgha"
           git pull origin main
-          #test
+          # Add any additional steps you need here
