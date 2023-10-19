@@ -15,5 +15,6 @@ jobs:
     steps:
       - name: pull project
         run: |
+          Set-ExecutionPolicy Unrestricted
           cd C:\Users\Adi Kar\Desktop\learn_github_actions\pp_01_lgha;; git pull origin main
       
