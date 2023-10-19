@@ -5,7 +5,7 @@ on:
       - main
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Get code
         uses: actions/checkout@v3
@@ -17,7 +17,7 @@ jobs:
         run: npm run test
   build:
     needs: test
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Get code
         uses: actions/checkout@v3
@@ -29,12 +29,12 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: dist-files
-          path: |
-            dist
-            package.json
+          path: dist
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    steps:
+      - name: Get build artifacts
     steps:
       - name: Deploy
         run: echo "Deploying..."
