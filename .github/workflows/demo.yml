@@ -17,8 +17,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Pull project
-        shell: cmd
+        shell: git-bash
         run: |
           cd "C:\Users\Adi Kar\Desktop\learn_github_actions\pp_01_lgha"
           git pull origin main
-          # Add any additional steps you need here
