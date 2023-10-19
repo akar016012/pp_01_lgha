@@ -35,6 +35,6 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Get build artifacts
-    steps:
-      - name: Deploy
-        run: echo "Deploying..."
+    # steps:
+    #   - name: Deploy
+    #     run: echo "Deploying..."
