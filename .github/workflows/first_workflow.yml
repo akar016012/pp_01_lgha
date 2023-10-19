@@ -17,6 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build Project
-        runs: vite build
+        run: vite build
       - name: Deploy Project
         run: echo "Deploying..."
